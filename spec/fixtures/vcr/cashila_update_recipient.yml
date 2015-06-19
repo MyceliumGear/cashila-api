@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cashila-staging.com/api/v1/recipients/af1cfdf9-be92-46a4-b6b0-a606a86b1e7a
+    body:
+      encoding: UTF-8
+      string: '{"name":"Rena Med","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","bic":"BPHKPLPK","iban":"LT121000011101001000"}'
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434649942138761'
+      Api-Sign:
+      - inRfdFxnp+8xRb4o8CTQT01P36ypeu0+FkP+zmptp2DRPY9a85NEDtkCEwJHYxC171koIn/1HPuJP0UlExSeIw==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 18 Jun 2015 17:52:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df07945d2ca8413d23ccceee8b4ac1dc11434649942; expires=Fri, 17-Jun-16
+        17:52:22 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=80ba5adc-7131-462f-83a2-ea60b1e9da91; expires=Mon, 16-May-2016 17:52:22
+        GMT; path=/
+      - laravel_session=eyJpdiI6Ik9mQlhianNHK010dFFSa3ZGanpManc9PSIsInZhbHVlIjoiaVQ3c09LckNaODl4RmFqRDJSenhwaTN1Q2ZKTG1aandRdjRuMVUwRk5rcFNmZ1FKRDN6U0RuakNyOVRvTE1KUVdPeGFyV3ZPaDRPRmJMY2lUejQyNGc9PSIsIm1hYyI6Ijc3YTE2NTZiNzA5MzQ2M2Q4NWM1YjNiM2NlMWQyNzA1NTNmMWU4ZTViYjYyNjFlOTY0ZDk3MzllMGZmZTYzZTQifQ%3D%3D;
+        expires=Thu, 18-Jun-2015 19:52:22 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f88d8fbd3ba16c4-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"id":"af1cfdf9-be92-46a4-b6b0-a606a86b1e7a","name":"Rena
+        Med","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","country_name":"Lithuania","last_used":"2015-06-18T17:49:29+0000"}}'
+    http_version: 
+  recorded_at: Thu, 18 Jun 2015 17:52:22 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cashila-staging.com/api/v1/recipients/af1cfdf9-be92-46a4-b6b0-a606a86b1e7a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434650502980915'
+      Api-Sign:
+      - x/+G90wMlKsmBQqRSpPXTtkHcQ2DhDjeTI5142n79k0woru+r7jEDGVdGTvREkgnCeKvdJshVYLVhgXhKIebew==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 18 Jun 2015 18:01:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d39246d46da4b05c4e8e0e845b9239c291434650503; expires=Fri, 17-Jun-16
+        18:01:43 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=79043755-d4df-4819-9632-d7e61d8866e7; expires=Mon, 16-May-2016 18:01:43
+        GMT; path=/
+      - laravel_session=eyJpdiI6IlMyMnc2cld3R3g3MDNqZFwvQk1Xdzl3PT0iLCJ2YWx1ZSI6InMyZjZ0MWYxQ3NuZ2wxZTVmbms4XC9FNUdPSVBJV0x4dkp4UDZYbTVudHppVHkzUkFqY2NiZzAwWFhiQVdVYWMrREpxRHJTMUtxclM0UFJKSXVhRWZrZz09IiwibWFjIjoiYjk1ZDEyNWRiMDNmYmNlZWRjODg2ZTg5NzY4Mzc5OWI0MjlhN2ZhODdlN2RhZGIwYmY0ZDFkNzkxOTQ1MWI5OSJ9;
+        expires=Thu, 18-Jun-2015 20:01:43 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f88e6aea4c216d6-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"id":"af1cfdf9-be92-46a4-b6b0-a606a86b1e7a","name":"Rena
+        Med","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","country_name":"Lithuania","last_used":"2015-06-18T17:49:29+0000"}}'
+    http_version: 
+  recorded_at: Thu, 18 Jun 2015 18:01:43 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cashila-staging.com/api/v1/account
+    body:
+      encoding: UTF-8
+      string: '{"account":{"email":"alerticus@gmail.com"},"verification":{"first_name":"Example","last_name":"Xample","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434534847963186'
+      Api-Sign:
+      - nx5eQFu+vBDfccpXJZJDNaPWfL4fnGoaQG/Hb0xxWsrMd17anhVRFHrFxGTvEuwl1SW13qPMeVGqciCfT92mzg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 17 Jun 2015 09:54:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd12ac2897dd4a496203ae9e367848d4b1434534848; expires=Thu, 16-Jun-16
+        09:54:08 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=6f8cbb7e-856c-4f94-bae4-4de0592c7461; expires=Sun, 15-May-2016 09:54:08
+        GMT; path=/
+      - laravel_session=eyJpdiI6Ilp3QUxFc0t1cmRoR3lPQmFwUXhURUE9PSIsInZhbHVlIjoiRGhicHRmVHlYSXFlXC9rQ090T3BoYlBlSUptUDYrSnMxQ3JiSmxZakE4Nk1jTTZhNTN0K0N4TGVKVFZTaGVBdlRsb296dFkrQkNXeTF3U3hhb252aVl3PT0iLCJtYWMiOiI4OTE3MGU4OTRiYjJjZGI4Y2FkZmRjOGM3OWQ3YTU3OTAxZDlmMTlmMmQxMzQ0ZTE1NTk0MWUwMmZkNzhkMzAwIn0%3D;
+        expires=Wed, 17-Jun-2015 11:54:09 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f7ddf11925f074f-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{}}'
+    http_version: 
+  recorded_at: Wed, 17 Jun 2015 09:54:09 GMT
+recorded_with: VCR 2.9.3

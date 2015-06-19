@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cashila-staging.com/api/v1/verification
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434535251690697'
+      Api-Sign:
+      - g/WEbhd4tfSof173Nx2wWkPu7EmUuNEYghaCIc+Zij6LubwcbumkC0FMfr7FKs8wpqbUM8On04IWPMFKJYir7A==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 17 Jun 2015 10:00:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd9d5ce178a627661a147023c3c60693a1434535252; expires=Thu, 16-Jun-16
+        10:00:52 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=b3fdbf89-35e1-4670-b17a-6d3901333667; expires=Sun, 15-May-2016 10:00:52
+        GMT; path=/
+      - laravel_session=eyJpdiI6Ims4WHdmNkZ3bVYyTDlYUmRieGU1Rmc9PSIsInZhbHVlIjoibzhJR2d3QStETVFmZFQ5cHpRakV4VzNlMTFKV2dUYWRVdFA3dVhLV2tESzFtaE02Q3FNNk80KzY1TUVqWmR2TzdtTngyVXFucE5sWEMxYkpUYktjYUE9PSIsIm1hYyI6Ijg3NDgxNjZhMDQzZGE1MDkyYThkZmExYTJkZmUyN2EwY2E1ZDg3MWUwODMwM2ExOTNjMDg5MjA3Mzk3ZjQ1NTgifQ%3D%3D;
+        expires=Wed, 17-Jun-2015 12:00:52 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f7de8ed1711146d-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"pending","first_name":"Example","last_name":"Xample","address":"somewhere","city":"Vilnius","postal_code":"000000","country_code":"LT","gov-id-front":{"present":false},"gov-id-back":{"present":false},"residence":{"present":false}}'
+    http_version: 
+  recorded_at: Wed, 17 Jun 2015 10:00:52 GMT
+recorded_with: VCR 2.9.3

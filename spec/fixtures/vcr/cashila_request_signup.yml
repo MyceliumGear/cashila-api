@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://cashila-staging.com/api/v1/request-signup
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 17 Jun 2015 08:43:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d866b681adddf27a64a5695b7c6a8c5dc1434530593; expires=Thu, 16-Jun-16
+        08:43:13 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=4b6520b5-ed84-43d3-86ac-7d37a2f72759; expires=Sun, 15-May-2016 08:43:13
+        GMT; path=/
+      - laravel_session=eyJpdiI6InZpdFJ4eFh3a2hPTHBaWjRsZ1pRRlE9PSIsInZhbHVlIjoiTHhjbjRvaWhEbjBnMVZ6M29BazYrdmd2UTBKdFpDT1dzMVJkTVY3bDZjdE5uTkhqa2xTNGZXZ0lScFk3dXpPVkZMazJWeHVcL2xDajFhUU5ra3lVMWZRPT0iLCJtYWMiOiJhMWUzYjYyOTZjNjQ5YjVjNWI1YzcxNmI0MmI5ZjgxYTJlYjI1YTRhYTliNzc2Mjk1ZTcxOWRiMjg3Y2E5NTc0In0%3D;
+        expires=Wed, 17-Jun-2015 10:43:13 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f7d77330cda074f-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"token":"40b0c81d-626e-4cf6-af79-75fb92800f32","secret":"ldUBiJqbXFYK63iC6bM48Ok2g83dqDtSvCyTL94QHPGmhpMzmmNKcyQGacjBnkTt1cby4p3yXSrqR33LLen5hw=="}}'
+    http_version: 
+  recorded_at: Wed, 17 Jun 2015 08:43:13 GMT
+recorded_with: VCR 2.9.3

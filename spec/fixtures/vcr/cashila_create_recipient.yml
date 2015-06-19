@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cashila-staging.com/api/v1/recipients
+    body:
+      encoding: UTF-8
+      string: '{"name":"Example Xample","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","bic":"BPHKPLPK","iban":"LT121000011101001000"}'
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434649768841324'
+      Api-Sign:
+      - 65qQQt4p57nOCIEMrIkG1XUIWwoj7mCi6/HZjl46lygRK+PzENxYKt6lLGKncgdvu8qyieOWa/aAa/+2yP08kg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 18 Jun 2015 17:49:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d19bc16d8ed991a881c5f3d0353df5e611434649769; expires=Fri, 17-Jun-16
+        17:49:29 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=605cbd2b-4855-474a-9d82-b231230a05df; expires=Mon, 16-May-2016 17:49:29
+        GMT; path=/
+      - laravel_session=eyJpdiI6ImpLTDFHR1ZFYm9tYVo4OVBxZ3RxYXc9PSIsInZhbHVlIjoiTVpTbCtISGxYbUJQQ0prVm91dmpzeUt0YjJxdmxabnQ4cFJjaGdOQ3FxaVJUbmhGN1wvRFwvQXJSN2ZXWXdjdUNka3dUOHNlRkdqc1B0UDhcL0ZRQkdzMFE9PSIsIm1hYyI6ImI0YTYwNTJmNTdmZWExYWY3M2I0YTdiZjljNDA5ZWEzYTRlNGQyYmM4ZWY0NjcyMDQxZGE4Yjc0OWQ3YTYwZjYifQ%3D%3D;
+        expires=Thu, 18-Jun-2015 19:49:29 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f88d4c07c5116b8-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"id":"af1cfdf9-be92-46a4-b6b0-a606a86b1e7a","name":"Example
+        Xample","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","country_name":"Lithuania","last_used":"2015-06-18T17:49:29+0000"}}'
+    http_version: 
+  recorded_at: Thu, 18 Jun 2015 17:49:29 GMT
+recorded_with: VCR 2.9.3

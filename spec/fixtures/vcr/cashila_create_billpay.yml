@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cashila-staging.com/api/v1/billpays/create
+    body:
+      encoding: UTF-8
+      string: '{"amount":1.21,"currency":"EUR","based_on":"af1cfdf9-be92-46a4-b6b0-a606a86b1e7a"}'
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.1
+      Api-User:
+      - 40b0c81d-626e-4cf6-af79-75fb92800f32
+      Api-Nonce:
+      - '1434707092130853'
+      Api-Sign:
+      - x2+NV+Hrkn2W78XcTenGZKOONVqU1hh/L8jhKDmPzHD9j4J8bzIdb1kud1aE7570tkTXT36VMo0wMNQUbUSsQQ==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 19 Jun 2015 09:44:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de6a26f483f10113f33e7797c460bcaea1434707092; expires=Sat, 18-Jun-16
+        09:44:52 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      - cashila=eed19d70-5b15-417a-9fe9-37bff5114f04; expires=Tue, 17-May-2016 09:44:52
+        GMT; path=/
+      - laravel_session=eyJpdiI6ImxDWWVOclIyeXVXVE9jNE1kYXp0WUE9PSIsInZhbHVlIjoiMnphUVZ4dnNEK1FVdUY5RXdiek5CdHc4R0xRdzBubUcxa3ZLZFQ0MFFXek9EdnlmR2dFbmtDakJHUFVlc09IdDdrN0F5ZTI0eGNObHFoemtydHhiZ2c9PSIsIm1hYyI6ImZmM2I1ODg3NWI1NGJiOTQwMTBjYThhZGIwYjc0MWFjNmRmZTFkNTI2ZTQ5NzNiYzJkNGU3ZjQ3ZjAxNTA3M2UifQ%3D%3D;
+        expires=Fri, 19-Jun-2015 11:44:52 GMT; path=/; httponly
+      X-Powered-By:
+      - PHP/5.4.39-0+deb7u2
+      Cache-Control:
+      - no-cache
+      X-Robots-Tag:
+      - noindex
+      Cf-Ray:
+      - 1f8e4c3f22e2059d-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"id":"dce801a6-2a01-4b37-b77b-5e609724b8be","status":"pending","recipient":{"name":"Rena
+        Med","address":"somewhere","postal_code":"000000","city":"Vilnius","country_code":"LT","country_name":"Lithuania"},"payment":{"iban":"LT12
+        1000 0111 0100 1000 ","bic":"BPHKPLPK","amount":1.21,"currency":"EUR"},"details":{"created_at":"2015-06-19T09:44:52+0000","updated_at":"2015-06-19T09:44:52+0000","fee":0.02,"exchange_rate":217.22358606,"amount_deposited":"0","amount_to_deposit":"0.00566236","total_amount":"0.00566236","wallet_url":"bitcoin:mszb3RpMpBDrk78eEQqBWVvH3AHnPgYkoG?amount=0.00566236","valid_until":"2015-06-19T10:14:52+0000","address":"mszb3RpMpBDrk78eEQqBWVvH3AHnPgYkoG"}}}'
+    http_version: 
+  recorded_at: Fri, 19 Jun 2015 09:44:52 GMT
+recorded_with: VCR 2.9.3
