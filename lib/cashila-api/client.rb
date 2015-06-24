@@ -121,7 +121,7 @@ module CashilaAPI
       {
         url:     @url,
         ssl:     {
-          ca_path: '/usr/lib/ssl/certs',
+          ca_path: ENV['SSL_CERT_DIR'] || '/etc/ssl/certs',
         },
         headers: {
           content_type: 'application/json',
