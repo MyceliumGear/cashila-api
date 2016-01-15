@@ -4,8 +4,8 @@ http_interactions:
     method: put
     uri: https://cashila-staging.com/api/v1/verification/gov-id-front
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
+      encoding: UTF-8
+      base64_string: |
         /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYW
         GDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/
         2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj
@@ -262,9 +262,9 @@ http_interactions:
       Api-User:
       - 40b0c81d-626e-4cf6-af79-75fb92800f32
       Api-Nonce:
-      - '1434536627995026'
+      - '1452840350701353'
       Api-Sign:
-      - hGOA6kV/hDjgcy86fO8a7AIsw9JdNIKvAJUtW56gQJzu6fIiRT4bDFD5wzl8qi5f5mYbL+zyNPQRtixCufp/oA==
+      - E5RfWqZAGPh5c4twkOyBKKOOrAOU4ZiyWb3fwFHv2lNnJvsz0++QQo0j8DyRyZMcsc4qKE57TRx0TaNkvo/GYQ==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -277,7 +277,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Wed, 17 Jun 2015 10:23:48 GMT
+      - Fri, 15 Jan 2016 06:44:45 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -285,31 +285,24 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d935a1ea570535c518276d2b56f3f55911434536628; expires=Thu, 16-Jun-16
-        10:23:48 GMT; path=/; domain=.cashila-staging.com; HttpOnly
-      - cashila=fee6105a-11c6-4e3f-961a-c417ada2e915; expires=Sun, 15-May-2016 10:23:48
-        GMT; path=/
-      - laravel_session=eyJpdiI6ImlqZVdSa1NyU1ZVSUlyNmFvWHhleWc9PSIsInZhbHVlIjoibVFQTyt2eFUzSnVNWFwvR0tBc0k3ZFwvTnNvK2I5OUsxT2I2eFAxS1dUZlA0UkRZZHZBOU1Rb1l6OCtPTWtEQm01NFlpWmtybGt5NktNQ1BZbmFuOTJoUT09IiwibWFjIjoiODI5ZmY3YTUzNDA5ZTlhMDM5NmYyNmU4YTQ2MTBkNzc2ZTM1NTQwOGNjOWU2MWE2YmEyMjU4ZTMwMWEwMjRkYyJ9;
-        expires=Wed, 17-Jun-2015 12:23:48 GMT; path=/; httponly
-      X-Powered-By:
-      - PHP/5.4.39-0+deb7u2
+      - __cfduid=d1bdf6e6aa8d7402051528bc2b62b428f1452840285; expires=Sat, 14-Jan-17
+        06:44:45 GMT; path=/; domain=.cashila-staging.com; HttpOnly
       Cache-Control:
       - no-cache
-      X-Robots-Tag:
-      - noindex
       Cf-Ray:
-      - 1f7e0a86f7b60bed-AMS
+      - 264f9d267330375c-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"result":{}}'
+      base64_string: |
+        eyJyZXN1bHQiOnt9fQ==
     http_version: 
-  recorded_at: Wed, 17 Jun 2015 10:23:48 GMT
+  recorded_at: Fri, 15 Jan 2016 06:45:51 GMT
 - request:
     method: put
     uri: https://cashila-staging.com/api/v1/verification/gov-id-back
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
+      encoding: UTF-8
+      base64_string: |
         /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYW
         GDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/
         2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj
@@ -566,9 +559,9 @@ http_interactions:
       Api-User:
       - 40b0c81d-626e-4cf6-af79-75fb92800f32
       Api-Nonce:
-      - '1434536628491122'
+      - '1452840351174030'
       Api-Sign:
-      - x2MrrXkt1ZouRkTxTiMmWbEhgMLZffGkkG4iFxMHq2HA4O/je+RaqFSuzkte9LLFzfPJQ0OFXrIE2pRUN4Ebfw==
+      - NK+JsqIaTEp/J0q61v3/VUMdGCVB4OZslWDhuOIcaGp1qgS4fY+jH0Z2mzYpeoZ8tI+Z9cpHaFTSyyU2uj4PvQ==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -581,7 +574,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Wed, 17 Jun 2015 10:23:48 GMT
+      - Fri, 15 Jan 2016 06:44:45 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -589,31 +582,24 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d506cea93f81f799d41b7597c091a72561434536628; expires=Thu, 16-Jun-16
-        10:23:48 GMT; path=/; domain=.cashila-staging.com; HttpOnly
-      - cashila=b6cfeed3-dd67-4424-9f0a-e2a7b9f36535; expires=Sun, 15-May-2016 10:23:48
-        GMT; path=/
-      - laravel_session=eyJpdiI6IkoyK3RZK29hODg5UlVFRVVJUGo5R2c9PSIsInZhbHVlIjoiSWJWMGRmd1ZjQUxjYnJwcUNETmdQaVJhRkdsenNNYzU1UkNQWEtnSGtyd2JKdTFzVFRsMUE4MTcrT1FXMnJWeVQ2c2dRTnVrT2ZZeXhrY3hHSHNZT2c9PSIsIm1hYyI6ImU4ZDk5NzVhYzZjZDY4NTI2NGQ1MjQ1MDM4ZjEzMmRhYmVhMzFmNjNhMDk3MDM3MzYyN2M2MWNjMmM5MTMwMWIifQ%3D%3D;
-        expires=Wed, 17-Jun-2015 12:23:48 GMT; path=/; httponly
-      X-Powered-By:
-      - PHP/5.4.39-0+deb7u2
+      - __cfduid=d195ab52c5413743a2cf558d50007cd821452840285; expires=Sat, 14-Jan-17
+        06:44:45 GMT; path=/; domain=.cashila-staging.com; HttpOnly
       Cache-Control:
       - no-cache
-      X-Robots-Tag:
-      - noindex
       Cf-Ray:
-      - 1f7e0a89b1260c0b-AMS
+      - 264f9d295130373e-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"result":{}}'
+      base64_string: |
+        eyJyZXN1bHQiOnt9fQ==
     http_version: 
-  recorded_at: Wed, 17 Jun 2015 10:23:48 GMT
+  recorded_at: Fri, 15 Jan 2016 06:45:51 GMT
 - request:
     method: put
     uri: https://cashila-staging.com/api/v1/verification/residence
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
+      encoding: UTF-8
+      base64_string: |
         /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYW
         GDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/
         2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj
@@ -870,9 +856,9 @@ http_interactions:
       Api-User:
       - 40b0c81d-626e-4cf6-af79-75fb92800f32
       Api-Nonce:
-      - '1434536628899114'
+      - '1452840351555925'
       Api-Sign:
-      - mfm7JRrh49ArcwKli148KLMai9ByncOBfy3IKwVawPtr+V7ZGTt5Uk07y/SLoEkVfupHzy0nd3xIIcCX1um79g==
+      - rAhXAaNmaKIWWqlS8oUsD56QxDw8C2cOE1dLrzKYwbHpdWqYe3tny1/PGZGzGcz+RhBaPDE1knHlEVrBvHZWKg==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -885,7 +871,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Wed, 17 Jun 2015 10:23:49 GMT
+      - Fri, 15 Jan 2016 06:44:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -893,23 +879,16 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dbd03d7d4f7fad477f15a2e9555290b7c1434536629; expires=Thu, 16-Jun-16
-        10:23:49 GMT; path=/; domain=.cashila-staging.com; HttpOnly
-      - cashila=520e2d35-8920-4013-9a06-7dbbf466cd69; expires=Sun, 15-May-2016 10:23:49
-        GMT; path=/
-      - laravel_session=eyJpdiI6InNDZGRqeVN6R1hcL3A2SVBWK2s5OUt3PT0iLCJ2YWx1ZSI6Imp4REt4RzBNemVhWGpXcUdyYWJiUVFKMkNtM0phN1RUa3AxTXpyMEVFS1wvSCtXTjlZQVJ1em1ETWF0RjdObjNYeXdxVzRwYTQxYUVMTkIwN1FVVmxEUT09IiwibWFjIjoiY2NhZTczNzZmOGY1OWE5MTVjMmI2OTIyMzBhNzVkNDE1YTk1YWYzMWE1MjBkYTUyNDM3ZmZlMDZiM2YwYjUxOCJ9;
-        expires=Wed, 17-Jun-2015 12:23:49 GMT; path=/; httponly
-      X-Powered-By:
-      - PHP/5.4.39-0+deb7u2
+      - __cfduid=dc68632361a7c8303da34931ff13cfd2c1452840286; expires=Sat, 14-Jan-17
+        06:44:46 GMT; path=/; domain=.cashila-staging.com; HttpOnly
       Cache-Control:
       - no-cache
-      X-Robots-Tag:
-      - noindex
       Cf-Ray:
-      - 1f7e0a8c34b400e0-AMS
+      - 264f9d2bbb1737aa-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"result":{}}'
+      base64_string: |
+        eyJyZXN1bHQiOnt9fQ==
     http_version: 
-  recorded_at: Wed, 17 Jun 2015 10:23:49 GMT
+  recorded_at: Fri, 15 Jan 2016 06:45:52 GMT
 recorded_with: VCR 2.9.3

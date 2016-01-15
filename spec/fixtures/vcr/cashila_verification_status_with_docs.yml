@@ -16,9 +16,9 @@ http_interactions:
       Api-User:
       - 40b0c81d-626e-4cf6-af79-75fb92800f32
       Api-Nonce:
-      - '1434536629346235'
+      - '1452840204734342'
       Api-Sign:
-      - "+MrU2X/DOu3WAhHjISsSvwjHiz1YM8FXN5sBBI2vs2mTnH/CkgCeTks0ASDV3PGpa9xkFp7sfqiFKG8h1GWgEw=="
+      - P05I/hcHhjqEKk26iODrBJGSk/z4/bLI4o42u3ioVs8PM6s9Si6UuLs4WsexlKvXEUJgR+hNkjtj0UbjAmQvmQ==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Wed, 17 Jun 2015 10:23:49 GMT
+      - Fri, 15 Jan 2016 06:42:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,23 +39,15 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4fa3776618058d3c70fe84ddc139d5dd1434536629; expires=Thu, 16-Jun-16
-        10:23:49 GMT; path=/; domain=.cashila-staging.com; HttpOnly
-      - cashila=a986ecb2-1ff6-48b9-ad97-557c7186faf0; expires=Sun, 15-May-2016 10:23:49
-        GMT; path=/
-      - laravel_session=eyJpdiI6IkxNbVJLQ1FicGE3MXU0dFwvdjFNV0tRPT0iLCJ2YWx1ZSI6InF6UXlLb2pmOW9oQmdLamUyOGZVVTBkam1NZE8yZExiNk5weDRnXC85MWJrZ0VPZHd3WlphenlvOGhYK05ycXp4NTJ4b2JXbGI3R3Voa2Exd29KM3E2UT09IiwibWFjIjoiMDIxY2MzNDNlZTVkMDgzZmY0YzhlMDE4NGU2N2YzMDZjOGE5NDJkM2M4MmQxNTA2ZGViN2I4ZDlmMmQ0OTIxNiJ9;
-        expires=Wed, 17-Jun-2015 12:23:49 GMT; path=/; httponly
-      X-Powered-By:
-      - PHP/5.4.39-0+deb7u2
+      - __cfduid=d7115055dae87eb32a0c4bf217d2b73d21452840139; expires=Sat, 14-Jan-17
+        06:42:19 GMT; path=/; domain=.cashila-staging.com; HttpOnly
       Cache-Control:
       - no-cache
-      X-Robots-Tag:
-      - noindex
       Cf-Ray:
-      - 1f7e0a8f24df0ca1-AMS
+      - 264f999611b316be-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"pending","first_name":"Example","last_name":"Xample","address":"somewhere","city":"Vilnius","postal_code":"000000","country_code":"LT","gov-id-front":{"present":true,"approved":false},"gov-id-back":{"present":true,"approved":false},"residence":{"present":true,"approved":false}}'
+      string: '{"result":{"status":"pending","is_company":false,"first_name":"Example","last_name":"Xample","address":"somewhere","city":"Vilnius","postal_code":"000000","country_code":"LT","gov-id-front":{"present":true,"approved":false},"gov-id-back":{"present":true,"approved":false},"residence":{"present":true,"approved":false}}}'
     http_version: 
-  recorded_at: Wed, 17 Jun 2015 10:23:49 GMT
+  recorded_at: Fri, 15 Jan 2016 06:43:25 GMT
 recorded_with: VCR 2.9.3
