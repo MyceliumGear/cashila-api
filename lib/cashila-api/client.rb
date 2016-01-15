@@ -50,13 +50,32 @@ module CashilaAPI
       parse_response(response)
     end
 
-    # @param [Hash[Symbol => String]] docs
+    # @param [Hash[Symbol => Array<Hash>]] docs the collection of documents that will be uploaded
+    #
+    # @example List of documents
+    #   {
+    #     gov-id-front: [{
+    #       file_body: '< government_id_body >'
+    #     }],
+    #     company: [
+    #       {
+    #         file_name: 'governance_document',
+    #         file_body: '< governance_document_body >'
+    #       },
+    #       {
+    #         file_name: 'project_summary',
+    #         file_body: '< project_summary_body >'
+    #       }
+    #     ]
+    #   }
     def upload_docs(docs)
-      %i{gov-id-front gov-id-back residence}.map do |key|
-        if (doc = docs[key])
+      %i{gov-id-front gov-id-back residence company}.map do |key|
+        next unless docs[key]
+        docs[key].map do |doc|
           response = connection(sign: true).put("/api/v1/verification/#{key}") do |req|
             req.headers[:content_type] = 'application/octet-stream'
-            req.body                   = doc
+            req.headers[:x_file_name]  = doc[:file_name] if doc[:file_name]
+            req.body                   = doc[:file_body]
           end
           parse_response(response)
         end

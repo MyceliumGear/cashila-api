@@ -93,19 +93,19 @@ RSpec.describe CashilaAPI::Client do
 
       it "uploads docs" do
         doc = File.read('spec/fixtures/multipass.jpg')
-        VCR.use_cassette 'cashila_upload_docs' do
+        VCR.use_cassette 'cashila_upload_docs', preserve_exact_body_bytes: true do
           @result = @client.upload_docs(
-            :'gov-id-front' => doc,
-            :'gov-id-back'  => doc,
-            :residence      => doc,
+            :'gov-id-front' => [ file_body: doc ],
+            :'gov-id-back'  => [ file_body: doc ],
+            :residence      => [ file_body: doc ]
           )
         end
-        expect(@result).to eq([{}, {}, {}])
+        expect(@result).to eq([[{}], [{}], [{}], nil])
 
         VCR.use_cassette 'cashila_verification_status_with_docs' do
           @result = @client.verification_status
         end
-        expect(@result).to eq("status" => "pending", "first_name" => "Example", "last_name" => "Xample", "address" => "somewhere", "city" => "Vilnius", "postal_code" => "000000", "country_code" => "LT", "gov-id-front" => {"present" => true, "approved" => false}, "gov-id-back" => {"present" => true, "approved" => false}, "residence" => {"present" => true, "approved" => false})
+        expect(@result).to eq("status" => "pending", "is_company" => false, "first_name" => "Example", "last_name" => "Xample", "address" => "somewhere", "city" => "Vilnius", "postal_code" => "000000", "country_code" => "LT", "gov-id-front" => {"present" => true, "approved" => false}, "gov-id-back" => {"present" => true, "approved" => false}, "residence" => {"present" => true, "approved" => false})
       end
 
       it "syncs recipient" do
