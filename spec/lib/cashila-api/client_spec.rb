@@ -23,7 +23,7 @@ RSpec.describe CashilaAPI::Client do
     @client     = described_class.new(client_id: '123')
     @connection = @client.connection
     expect(@connection.url_prefix.to_s).to eq CashilaAPI::TEST_URL + '/'
-    expect(@connection.headers).to eq('Content-Type' => 'application/json', 'API-Client' => '123', 'User-Agent' => 'Faraday v0.9.1')
+    expect(@connection.headers).to eq('Content-Type' => 'application/json', 'API-Client' => '123', 'User-Agent' => 'Faraday v0.9.2')
   end
 
   it "constructs signed connection" do
