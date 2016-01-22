@@ -19,6 +19,12 @@ module CashilaAPI
       end
     end
 
+    class WrongResponseFormat < StandardError
+      def initialize(error, response)
+        super "Error: #{error.message}\nResponse: #{response.body}"
+      end
+    end
+
     attr_accessor :client_id, :token, :secret, :url
 
     def initialize(client_id:, token: nil, secret: nil, url: CashilaAPI::TEST_URL)
@@ -124,6 +130,8 @@ module CashilaAPI
         raise ApiError.new(error)
       end
       result['result'] || result
+    rescue MultiJson::ParseError => e
+      raise WrongResponseFormat.new(e, response)
     end
 
     def connection(sign: false)
