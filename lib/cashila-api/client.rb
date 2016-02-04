@@ -123,6 +123,34 @@ module CashilaAPI
       parse_response(response)
     end
 
+    def create_deposit(amount:, currency: 'EUR')
+      response = connection(sign: true).put('/api/v1/deposits/create') do |req|
+        params = {
+          amount: amount,
+          currency: currency
+        }
+        req.body = MultiJson.dump(params)
+      end
+      parse_response(response)
+    end
+
+    def withdraw(recipient_id:, amount:, currency: 'EUR', reference: nil)
+      response = connection(sign: true).put('/api/v1/billpays/withdraw') do |req|
+        params = {
+          amount:   amount,
+          currency: currency,
+          based_on: recipient_id,
+        }
+        params[:reference] = reference if reference
+        req.body           = MultiJson.dump(params)
+      end
+      parse_response(response)
+    end
+
+    def balance
+      response = connection(sign: true).get('/api/v1/account/balance')
+      parse_response(response)
+    end
 
     def parse_response(response)
       result = MultiJson.load(response.body)

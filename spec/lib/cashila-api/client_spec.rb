@@ -144,5 +144,79 @@ RSpec.describe CashilaAPI::Client do
         expect(@result).to eq("id" => "dce801a6-2a01-4b37-b77b-5e609724b8be", "status" => "pending", "recipient" => {"name" => "Rena Med", "address" => "somewhere", "postal_code" => "000000", "city" => "Vilnius", "country_code" => "LT", "country_name" => "Lithuania"}, "payment" => {"iban" => "LT12 1000 0111 0100 1000 ", "bic" => "BPHKPLPK", "amount" => 1.21, "currency" => "EUR"}, "details" => {"created_at" => "2015-06-19T09:44:52+0000", "updated_at" => "2015-06-19T09:44:52+0000", "fee" => 0.02, "exchange_rate" => 217.22358606, "amount_deposited" => "0", "amount_to_deposit" => "0.00566236", "total_amount" => "0.00566236", "wallet_url" => "bitcoin:mszb3RpMpBDrk78eEQqBWVvH3AHnPgYkoG?amount=0.00566236", "valid_until" => "2015-06-19T10:14:52+0000", "address" => "mszb3RpMpBDrk78eEQqBWVvH3AHnPgYkoG"})
       end
     end
+
+    context "with verified account" do
+
+      before :each do
+        @client.token  = 'f1d3007d-5686-4aee-b6ec-ae31994682b4'
+        @client.secret = 'K8WRSnooXn83OfHnA3GTl5GIAPguSC/qQAWiQna7DiTkoKW848hnKIg1Ox0w2BtkecaIUuIbx/C8fhHNo7Gl6g=='
+      end
+
+      it "creates deposit" do
+        VCR.use_cassette 'cashila_create_deposit' do
+          @result = @client.create_deposit(amount: 3.21)
+        end
+        expect(@result).to eq(
+          "id" => "5af4af8b-1b02-438a-a71b-d1c802ca1bde",
+          "status" => "pending",
+          "deposit" => {
+            "amount" => 3.21,
+            "currency" => "EUR"
+          },
+          "details" => {
+            "created_at" => "2016-02-04T10:32:27+0000",
+            "updated_at" => "2016-02-04T10:32:27+0000",
+            "exchange_rate" => 334.13,
+            "amount_deposited" => "0.00000000",
+            "amount_to_deposit" => "0.00972657",
+            "total_amount" => "0.00972657",
+            "account_id" => 891,
+            "valid_until" => "2016-02-04T11:02:27+0000",
+            "address" => "mk4ehqMjYnqczidMPtTHhttFWeK9BbpSXW",
+            "wallet_url" => "bitcoin:mk4ehqMjYnqczidMPtTHhttFWeK9BbpSXW?amount=0.00972657",
+            "num_confirmations" => 0
+          }
+        )
+      end
+
+      it "gets balance" do
+        VCR.use_cassette "cashila_balance" do
+          @result = @client.balance
+        end
+        expect(@result).to eq("EUR" => { "balance" => 3.21, "available" => 3.21 })
+      end
+
+      it "withdraw" do
+        VCR.use_cassette "cashila_withdraw" do
+          @result = @client.withdraw(amount: 0.02, recipient_id: "db44f688-3948-4b83-b350-817effb4809c")
+        end
+        expect(@result).to eq(
+          "id" => "d96140dd-f784-4b78-aeb7-a339d6749b8e",
+          "status" => "confirmed",
+          "recipient" => {
+            "name" => "rty",
+            "address" => "rty",
+            "postal_code" => "555",
+            "city" => "rty",
+            "country_code" => "AS",
+            "country_name" => "American Samoa"
+          },
+          "payment" => {
+            "iban" => "LT12 1000 0111 0100 1000 ",
+            "bic" => "BPHKPLPK",
+            "amount" => 0.02,
+            "currency" => "EUR"
+          },
+          "details" => {
+            "type" => "withdraw",
+            "account_id" => "891",
+            "created_at" => "2016-02-04T10:58:12+0000",
+            "updated_at" => "2016-02-04T10:58:12+0000",
+            "fee" => 0
+          }
+        )
+      end
+
+    end
   end
 end
