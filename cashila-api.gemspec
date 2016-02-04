@@ -6,7 +6,7 @@ require 'cashila-api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'cashila-api'
   spec.version       = CashilaAPI::VERSION
-  spec.authors       = ['AlexanderPavlenko']
+  spec.authors       = ['AlexanderPavlenko', 'Alexey Shepelev']
   spec.email         = ['alerticus@gmail.com']
 
   spec.summary       = %q{Wrapper for Cashila API}
