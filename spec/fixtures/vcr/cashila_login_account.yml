@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://cashila-staging.com/api/v1/request-signup
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 19 Feb 2016 14:53:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d712af92ab37d64b07f5d64d3d75bcc5b1455893630; expires=Sat, 18-Feb-17
+        14:53:50 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      Cache-Control:
+      - no-cache
+      Cf-Ray:
+      - 2772cdb53bb637c2-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{"token":"7c0324b1-d49d-47dd-a954-1bdf4a32fab0","secret":"XPvpoQm8c4KQx\/atciVoJzX4anlMJIk6\/HIcVKDQIq8P8iEw+ri4K2Y7oT5sFcHH0Ei86f1vr\/pfttWxQ4SutA=="}}'
+    http_version: 
+  recorded_at: Fri, 19 Feb 2016 14:53:51 GMT
+- request:
+    method: put
+    uri: https://cashila-staging.com/api/v1/account
+    body:
+      encoding: UTF-8
+      string: '{"account":{"email":"gear@mycelium.com","password":"cashila_password","second_factor":""}}'
+    headers:
+      Content-Type:
+      - application/json
+      Api-Client:
+      - 92c91f99-c157-41cd-864b-1b675bfcf919
+      User-Agent:
+      - Faraday v0.9.2
+      Api-User:
+      - 7c0324b1-d49d-47dd-a954-1bdf4a32fab0
+      Api-Nonce:
+      - '1455893631543114'
+      Api-Sign:
+      - 0/ooQ6oW9uXSIT6Cv/ABr/fp0vS+fLJE+oFg6dEzy+tsNnz9+Ba0+4slruA6LDFb/gZIZFmAmzgQ+dJjyvtpfw==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 19 Feb 2016 14:53:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d52c1928990b20e861b97c657de5fc4871455893630; expires=Sat, 18-Feb-17
+        14:53:50 GMT; path=/; domain=.cashila-staging.com; HttpOnly
+      Cache-Control:
+      - no-cache
+      Cf-Ray:
+      - 2772cdb75dbd0a5a-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":{}}'
+    http_version: 
+  recorded_at: Fri, 19 Feb 2016 14:53:51 GMT
+recorded_with: VCR 3.0.1

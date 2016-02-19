@@ -56,6 +56,19 @@ module CashilaAPI
       parse_response(response)
     end
 
+    # @param [String] email, password, second_factor (optional)
+    def login_account(email:, password:, second_factor: '')
+      response = connection(sign: true).put('/api/v1/account') do |req|
+        req.body = MultiJson.dump(
+          account: {
+            email: email,
+            password: password,
+            second_factor: second_factor
+          })
+      end
+      parse_response(response)
+    end
+
     # @param [Hash[Symbol => Array<Hash>]] docs the collection of documents that will be uploaded
     #
     # @example List of documents
