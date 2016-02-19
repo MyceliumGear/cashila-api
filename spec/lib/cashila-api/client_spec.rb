@@ -71,6 +71,19 @@ RSpec.describe CashilaAPI::Client do
         @client.secret = 'ldUBiJqbXFYK63iC6bM48Ok2g83dqDtSvCyTL94QHPGmhpMzmmNKcyQGacjBnkTt1cby4p3yXSrqR33LLen5hw=='
       end
 
+      it "login existing user" do
+        VCR.use_cassette 'cashila_login_account' do
+          @client.request_signup
+          @result = @client.login_account(email: 'gear@mycelium.com', password: 'cashila_password')
+        end
+        expect(@result).to eq({})
+
+        VCR.use_cassette 'cashila_login_verification_not_available' do
+          @result = @client.verification_status
+        end
+        expect(@result).to eq("status"=>"not_available")
+      end
+
       it "syncs account" do
         details = {
           first_name:   'Example',
