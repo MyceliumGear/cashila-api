@@ -81,7 +81,7 @@ RSpec.describe CashilaAPI::Client do
           country_code: 'LT',
         }
         VCR.use_cassette 'cashila_sync_account' do
-          @result = @client.sync_account(email: 'alerticus@gmail.com', details: details)
+          @result = @client.register_account(email: 'alerticus@gmail.com', details: details)
         end
         expect(@result).to eq({})
 
