@@ -56,6 +56,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: '{"result":{}}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 17 Jun 2015 09:54:09 GMT
 recorded_with: VCR 2.9.3

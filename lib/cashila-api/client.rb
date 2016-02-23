@@ -44,7 +44,7 @@ module CashilaAPI
 
     # @param [String] email
     # @param [Hash] details keys: first_name, last_name, address, postal_code, city, country_code
-    def sync_account(email:, details:)
+    def update_details(email:, details:)
       response = connection(sign: true).put('/api/v1/account') do |req|
         req.body = MultiJson.dump(
           account:      {
@@ -89,7 +89,7 @@ module CashilaAPI
     end
 
     # @param [Hash] details keys: id (optional), name, address, postal_code, city, country_code, iban, bic
-    def sync_recipient(details)
+    def update_recipient(details)
       return if !details || details.empty?
       details  = details.dup
       id       = details.delete(:id)
