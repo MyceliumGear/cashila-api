@@ -152,6 +152,11 @@ module CashilaAPI
       parse_response(response)
     end
 
+    def supported_countries
+      response = connection.get('api/v1/supported-countries')
+      parse_response(response).map { |x| [x['name'], x['code']] }
+    end
+
     def parse_response(response)
       result = MultiJson.load(response.body)
       if (error = result['error'])
