@@ -44,14 +44,14 @@ module CashilaAPI
 
     # @param [String] email
     # @param [Hash] details keys: first_name, last_name, address, postal_code, city, country_code
-    def create_account_or_login(email:, details:)
+    def create_account_or_login(email:, details: nil, password: nil, second_factor: nil)
+      json = {account: {email: email}}
+      json[:account][:password] = password if password
+      json[:account][:second_factor] = second_factor if second_factor
+      json[:verification] = details if details
+
       response = connection(sign: true).put('/api/v1/account') do |req|
-        req.body = MultiJson.dump(
-          account:      {
-            email: email,
-          },
-          verification: details,
-        )
+        req.body = MultiJson.dump(json)
       end
       parse_response(response)
     end
