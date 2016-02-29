@@ -81,7 +81,7 @@ RSpec.describe CashilaAPI::Client do
           country_code: 'LT',
         }
         VCR.use_cassette 'cashila_update_details' do
-          @result = @client.update_details(email: 'alerticus@gmail.com', details: details)
+          @result = @client.create_account_or_login(email: 'alerticus@gmail.com', details: details)
         end
         expect(@result).to eq({})
 
