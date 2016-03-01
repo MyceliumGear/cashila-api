@@ -44,14 +44,14 @@ module CashilaAPI
 
     # @param [String] email
     # @param [Hash] details keys: first_name, last_name, address, postal_code, city, country_code
-    def sync_account(email:, details:)
+    def create_account_or_login(email:, details: nil, password: nil, second_factor: nil)
+      body = {account: {email: email}}
+      body[:account][:password] = password if password
+      body[:account][:second_factor] = second_factor if second_factor
+      body[:verification] = details if details
+
       response = connection(sign: true).put('/api/v1/account') do |req|
-        req.body = MultiJson.dump(
-          account:      {
-            email: email,
-          },
-          verification: details,
-        )
+        req.body = MultiJson.dump(body)
       end
       parse_response(response)
     end
@@ -89,7 +89,7 @@ module CashilaAPI
     end
 
     # @param [Hash] details keys: id (optional), name, address, postal_code, city, country_code, iban, bic
-    def sync_recipient(details)
+    def update_recipient(details)
       return if !details || details.empty?
       details  = details.dup
       id       = details.delete(:id)
@@ -150,6 +150,11 @@ module CashilaAPI
     def balance
       response = connection(sign: true).get('/api/v1/account/balance')
       parse_response(response)
+    end
+
+    def supported_countries
+      response = connection.get('api/v1/supported-countries')
+      parse_response(response).map { |x| [x['name'], x['code']] }
     end
 
     def parse_response(response)

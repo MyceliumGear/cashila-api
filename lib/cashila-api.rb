@@ -1,4 +1,5 @@
 require 'cashila-api/version'
+require 'cashila-api/constants'
 require 'cashila-api/client'
 
 module CashilaAPI

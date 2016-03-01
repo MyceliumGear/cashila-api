@@ -71,7 +71,7 @@ RSpec.describe CashilaAPI::Client do
         @client.secret = 'ldUBiJqbXFYK63iC6bM48Ok2g83dqDtSvCyTL94QHPGmhpMzmmNKcyQGacjBnkTt1cby4p3yXSrqR33LLen5hw=='
       end
 
-      it "syncs account" do
+      it "updates user details" do
         details = {
           first_name:   'Example',
           last_name:    'Xample',
@@ -80,8 +80,8 @@ RSpec.describe CashilaAPI::Client do
           city:         'Vilnius',
           country_code: 'LT',
         }
-        VCR.use_cassette 'cashila_sync_account' do
-          @result = @client.sync_account(email: 'alerticus@gmail.com', details: details)
+        VCR.use_cassette 'cashila_update_details' do
+          @result = @client.create_account_or_login(email: 'alerticus@gmail.com', details: details)
         end
         expect(@result).to eq({})
 
@@ -108,7 +108,7 @@ RSpec.describe CashilaAPI::Client do
         expect(@result).to eq("status" => "pending", "is_company" => false, "first_name" => "Example", "last_name" => "Xample", "address" => "somewhere", "city" => "Vilnius", "postal_code" => "000000", "country_code" => "LT", "gov-id-front" => {"present" => true, "approved" => false}, "gov-id-back" => {"present" => true, "approved" => false}, "residence" => {"present" => true, "approved" => false})
       end
 
-      it "syncs recipient" do
+      it "updates recipient" do
         details = {
           name:         'Example Xample',
           address:      'somewhere',
@@ -120,14 +120,14 @@ RSpec.describe CashilaAPI::Client do
         }
         id      = 'af1cfdf9-be92-46a4-b6b0-a606a86b1e7a'
         VCR.use_cassette 'cashila_create_recipient' do
-          @result = @client.sync_recipient(details)
+          @result = @client.update_recipient(details)
         end
         expect(@result).to eq id
 
         details[:id]   = id
         details[:name] = 'Rena Med'
         VCR.use_cassette 'cashila_update_recipient' do
-          @result = @client.sync_recipient(details)
+          @result = @client.update_recipient(details)
         end
         expect(@result).to eq id
 
